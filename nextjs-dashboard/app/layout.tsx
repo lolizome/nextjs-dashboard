@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     default: 'Acme Dashboard'
   },
   description: 'The official Next.js Course Dashboard, built with App Router.',
+  other: {
+    google: ['notranslate', 'nositelinkssearchbox'],
+  },
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh')
 };
 
