@@ -2,6 +2,8 @@ import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://nextjs-dashboard-nine-psi-50.vercel.app' : 'http://localhost:3000';
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Acme Dashboard',
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
   other: {
     google: ['notranslate', 'nositelinkssearchbox'],
   },
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh')
+  metadataBase: new URL(baseUrl),
+  // alternates: {
+  //   canonical: 'https://example.com/blog/original-post'
+  // },
 };
 
 export default function RootLayout({
