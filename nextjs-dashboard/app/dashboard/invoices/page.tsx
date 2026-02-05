@@ -9,7 +9,13 @@ import { fetchInvoicesPages } from '@/app/lib/data';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
-    title: 'Invoices'
+    title: 'Invoices',
+    description: 'Checkout our invoices page',
+    openGraph: {
+        title: 'Social Title for Cool Page',
+        description: 'And a social description for our cool page',
+        images: [{ url: 'https://example.com/images/cool-page.jpg' }]
+    }
 };
 
 export default async function Page(props: {
